@@ -73,5 +73,9 @@ if __name__ == "__main__":
         videoavs_content.append('ffvideosource("' + full_filename + '", timecodes="' + filename + '.tc.txt", cachefile="' + filename + '.ffindex")')
         videoavs_content.append('spline36resize(480,272)')
 
-        
+        videoavs = open( filename , 'w' )
+
+        for incr in xrange( 0, len(videoavs_content)-1 ):
+            videoavs.write( videoavs[incr] )
+
         
