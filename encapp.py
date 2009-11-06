@@ -35,6 +35,7 @@ if __name__ == "__main__":
         setting = int(sys.argv[2])
         mode = "crf"
         app_path = os.path.dirname( os.path.realpath( __file__ ) )
+        full_filename = os.path.realpath( filename )
         
         '''
 
@@ -65,6 +66,9 @@ if __name__ == "__main__":
             <filename>.video.avs
 
         '''
-
-        content = 'LoadPlugin(' + app_path + '\avs\ffms2\FFMS2.dll")'
+        videoavs_content = []
+        videoavs_content.append('LoadPlugin("' + app_path + '\avs\ffms2\FFMS2.dll")')
+        videoavs_content.append('ffindex("' + full_filename + '", cachefile="' + filename + '.ffindex")')
+        videoavs_content.append('
+        
         
