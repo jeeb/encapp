@@ -66,9 +66,12 @@ if __name__ == "__main__":
             <filename>.video.avs
 
         '''
+        
         videoavs_content = []
         videoavs_content.append('LoadPlugin("' + app_path + '\avs\ffms2\FFMS2.dll")')
         videoavs_content.append('ffindex("' + full_filename + '", cachefile="' + filename + '.ffindex")')
-        videoavs_content.append('
+        videoavs_content.append('ffvideosource("' + full_filename + '", timecodes="' + filename + '.tc.txt", cachefile="' + filename + '.ffindex")')
+        videoavs_content.append('spline36resize(480,272)')
+
         
         
