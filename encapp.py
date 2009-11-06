@@ -43,7 +43,7 @@ if __name__ == "__main__":
 
         '''
 
-        if ( setting > 0 and setting < 52 ):
+        if ( setting > 0 and setting <= 51 ):
             mode = "crf"
         elif ( setting == 0 ):
             sys.exit("You are setting your ratecontrol to 0!\n This will give you lossless which will not work on your hardware!")
