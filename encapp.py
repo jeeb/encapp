@@ -34,6 +34,9 @@ if __name__ == "__main__":
         filename = str(sys.argv[1])
         setting = int(sys.argv[2])
         mode = "crf"
+        app_path = os.path.dirname( os.path.realpath( __file__ ) )
+
+        
         
 
         '''
@@ -58,7 +61,7 @@ if __name__ == "__main__":
         '''
 
         if ( os.path.isfile( filename ) == false ):
-             sys.exit("The original file is not there or isn't a file.")
+             sys.exit("The input file is not there or isn't a file.")
 
         '''
             Write the video avs file.
@@ -66,5 +69,5 @@ if __name__ == "__main__":
 
         '''
 
-        content = 'LoadPlugin(' + <%AppPath%>\avs\ffms2\FFMS2.dll")'
+        content = 'LoadPlugin(' + '<%AppPath%>\avs\ffms2\FFMS2.dll")'
         
