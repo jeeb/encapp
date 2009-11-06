@@ -83,5 +83,5 @@ if __name__ == "__main__":
             Run mplayer in order to get audio MAAARRRRRRGHGH.
         '''
 
-        os.execlp()
+        os.execlp("mplayer" , "-vc dummy" , "-vo null" , "-ao pcm:fast" , "-af resample=48000:0:2" , "-benchmark" , str(full_filename))
         
