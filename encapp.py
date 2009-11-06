@@ -36,6 +36,7 @@ if __name__ == "__main__":
         mode = "crf"
         app_path = os.path.dirname( os.path.realpath( __file__ ) )
         full_filename = os.path.realpath( filename )
+        sys.path.append( os.path.join( app_path, "apps" )
         
         '''
 
@@ -77,5 +78,10 @@ if __name__ == "__main__":
 
         for incr in xrange( 0, len(videoavs_content)-1 ):
             videoavs.write( videoavs[incr] )
+        
+        '''
+            Run mplayer in order to get audio MAAARRRRRRGHGH.
+        '''
 
+        os.execlp()
         
