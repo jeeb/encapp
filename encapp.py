@@ -35,10 +35,7 @@ if __name__ == "__main__":
         setting = int(sys.argv[2])
         mode = "crf"
         app_path = os.path.dirname( os.path.realpath( __file__ ) )
-
         
-        
-
         '''
 
             Deciding the ratecontrol mode from input.
@@ -69,5 +66,5 @@ if __name__ == "__main__":
 
         '''
 
-        content = 'LoadPlugin(' + '<%AppPath%>\avs\ffms2\FFMS2.dll")'
+        content = 'LoadPlugin(' + app_path + '\avs\ffms2\FFMS2.dll")'
         
